@@ -1,0 +1,16 @@
+<included>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${defaultPattern}</pattern>
+            <outputPatternAsHeader>true</outputPatternAsHeader>
+        </encoder>
+    </appender>
+
+    <appender name="APPLICATION_FILE" class="ch.qos.logback.core.FileAppender">
+        <encoder>
+            <pattern>${defaultPattern}</pattern>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+        <file>${rootLogPath}/application.log</file>
+    </appender>
+</included>

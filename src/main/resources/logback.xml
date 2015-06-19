@@ -1,0 +1,12 @@
+<!-- scan allows update of this file at runtime.-->
+<configuration scan="true" debug="true">
+    <property name="defaultPattern" value="[%level - %logger{0} - %date{ISO8601}] %msg%n"/>
+    <property name="rootLogPath" value="${root.log.path}"/>
+
+    <include resource="appenders.xml"/>
+
+    <root level="INFO">
+        <appender-ref ref="APPLICATION_FILE"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>
